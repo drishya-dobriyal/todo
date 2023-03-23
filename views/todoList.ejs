@@ -1,0 +1,27 @@
+<ul>
+  <% todoList.forEach(function(todo) { %>
+  <li id="<%=todo._id%>" <% if( todo.isTaskDone ) { %>
+    class="card task-completed" <% } else { %> class="card" <% } %> >
+    <section class="task-category-container">
+      <div class="task-done-container">
+        <% if(todo.isTaskDone){ %>
+        <input
+          type="checkbox"
+          data-id="<%=todo._id%>"
+          onclick="updateTodo()"
+          checked
+        />
+        <% } else { %>
+        <input type="checkbox" data-id="<%=todo._id%>" onclick="updateTodo()" />
+        <% }%>
+      </div>
+
+      <div class="category-container"><%= todo.category %></div>
+    </section>
+    <section>
+      <div class="description-container"><%= todo.description %></div>
+      <div class="duedate-container"><%= todo.dueDate %></div>
+    </section>
+    <% }); %>
+  </li>
+</ul>

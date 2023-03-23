@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title><%= title %></title>
+    <!-- Add css -->
+    <link href="/public/css/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <main>
+      <!-- Heading container -->
+      <header>Todo List</header>
+      <hr />
+      <!-- Input container -->
+      <section id="input-todo">
+        <!-- Description -->
+        <div class="input-box input-box-description">
+          <label for="description">Description</label>
+          <input
+            id="description"
+            name="description"
+            placeholder="What do you need to do..."
+            type="text"
+          />
+        </div>
+
+        <!-- Category -->
+        <div class="input-box input-box-category">
+          <label for="category">Category</label>
+          <select name="category" id="category">
+            <option value="Personal">Personal</option>
+            <option value="Work">Work</option>
+            <option value="House">House</option>
+          </select>
+        </div>
+
+        <!-- due date -->
+        <div class="input-box input-box-due-date">
+          <label for="due-date">Due Date</label>
+          <input id="due-date" name="due-date" placeholder="" type="date" />
+        </div>
+      </section>
+      <hr />
+      <!-- Buttons container-->
+      <section id="update-btns">
+        <button id="add-todo">Add Todo</button>
+        <button id="delete-todo">Delete Todo</button>
+      </section>
+      <hr />
+      <!-- Todo List -->
+      <section id="todo-list"><%- include("todoList") %></section>
+    </main>
+    <!-- Add js -->
+    <script src="public/js/home.js"></script>
+  </body>
+</html>

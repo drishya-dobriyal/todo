@@ -1,0 +1,159 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: sans-serif;
+}
+
+body {
+  color: #475569;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+}
+
+main {
+  height: 90vh;
+  width: 60vw;
+}
+
+/* Heading */
+header {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+  font-weight: 600;
+}
+
+/* Input Container */
+#input-todo {
+  width: 100%;
+  display: flex;
+  padding: 10px;
+}
+
+.input-box label {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 3px;
+}
+
+input {
+  outline: none;
+}
+
+.input-box-description {
+  min-width: 60%;
+  height: 60%;
+}
+.input-box-category {
+  min-width: 20%;
+}
+#description {
+  font-size: x-large;
+  border: transparent;
+  color: #6b7280;
+  padding: 10px;
+  width: 500px;
+}
+
+#category,
+#due-date {
+  border: none;
+  font-size: larger;
+  color: #6b7280;
+  text-align: center;
+  width: 150px;
+  height: 40px;
+}
+/* Buttons */
+#update-btns {
+  margin: 10px;
+}
+
+#add-todo,
+#delete-todo {
+  border: transparent;
+  font-size: x-large;
+  padding: 5px;
+  border-radius: 5px;
+  color: #e5e7eb;
+}
+
+#add-todo {
+  background-color: #10b981;
+  margin-right: 10px;
+}
+
+#add-todo:hover {
+  background-color: #e5e7eb;
+  color: #10b981;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+#delete-todo {
+  background-color: #e11d48;
+}
+
+#delete-todo:hover {
+  background-color: #e5e7eb;
+  color: #e11d48;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+/* Todo List */
+#todo-list {
+  margin: 20px;
+}
+
+ul > li {
+  list-style: none;
+  display: flex;
+}
+section {
+  margin-left: 2%;
+}
+
+.card {
+  background-color: #d4d4d4;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.task-category-container {
+  width: 8%;
+}
+input[type="checkbox"] {
+  height: 50%;
+  width: 50%;
+}
+input[type="checkbox"]:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.category-container {
+  color: #6b7280;
+  height: 50%;
+  width: 100%;
+  padding: 2%;
+}
+
+.description-container {
+  color: #0891b2;
+  font-size: x-large;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.duedate-container {
+  color: #f472b6;
+  font-size: small;
+}

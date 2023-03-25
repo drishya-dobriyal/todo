@@ -21,5 +21,8 @@ router.post("/deleteTodos", todoController.deleteTodos);
 /* Hanler for update todos */
 router.post("/updateTodo", todoController.updateTodo);
 
+/* Use Router  for Users */
+router.use("/users", require("./users"));
+
 /* Export router */
 module.exports = router;
